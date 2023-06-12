@@ -8,13 +8,10 @@
     "lint:fix": "eslint --fix .",
     "start": "ts-node-dev ./src/index.ts",
     "start:pro": "npm run build && node ./dist/index.js",
-    "start:debugts": "ts-node-dev --inspect -- ./src/index.ts",
-    "build:swagger-json": "ts-node-dev ./src/utils/generate-swagger-json.ts --ingore-watch",
+    "start:debugs": "ts-node-dev --inspect -- ./src/index.ts",
     "build": "tsc",
-    "test": "cross-env DB_NAME=API-BOOK-DEVELOPMENT jest",
     "prepare": "husky install",
-    "seed:author": "ts-node-dev ./src/seeds/author.seed.ts --ignore-watch",
-    "seed:playerteam": "ts-node-dev ./src/seeds/team-and-player.seed.ts --ignore-watch"
+    "precommit": "npm run lint && npm run build"
   },
   "keywords": [
     "node",
