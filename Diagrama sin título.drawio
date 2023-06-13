@@ -1,0 +1,33 @@
+<mxfile host="app.diagrams.net" modified="2023-06-12T16:29:49.464Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="sPcI8f6ssg2Ikmv2C5bY" version="21.3.2" type="github">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1434" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-14" value="" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="355" width="30" height="30" as="geometry">
+            <mxRectangle width="30" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.465;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZBHH7yy4VDpFSbhrQZDs-47" target="ZBHH7yy4VDpFSbhrQZDs-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-47" value="USER&lt;br&gt;&lt;br&gt;ROL: ESTUDIANTE, PROFE, ADMIN, PADRE&lt;br&gt;NOMBRE&lt;br&gt;APELLIDOS&lt;br&gt;EMAIL&lt;br&gt;CONTRASEÑA&lt;br&gt;HIJOS&lt;br&gt;CLASE&lt;br&gt;ASIGNATURAS[]" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-48" value="CLASE (4º ESO)&lt;br&gt;&lt;br&gt;NOMBRE&lt;br&gt;ALUMNOS: USER[]&lt;br&gt;ASIGNATURAS[]&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="155" y="-90" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.971;entryY=0.559;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZBHH7yy4VDpFSbhrQZDs-49" target="ZBHH7yy4VDpFSbhrQZDs-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.996;entryY=0.565;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ZBHH7yy4VDpFSbhrQZDs-49" target="ZBHH7yy4VDpFSbhrQZDs-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBHH7yy4VDpFSbhrQZDs-49" value="ASIGNATURA( INGLES 4º ESO)&lt;br&gt;&lt;br&gt;NOMBRE&lt;br&gt;CLASE&lt;br&gt;PROFESOR&lt;br&gt;AGEDAN[{&lt;br&gt;DIA: L/M/X/J/V&lt;br&gt;HORA: 9:00&lt;br&gt;}]&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="-120" width="250" height="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
