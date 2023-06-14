@@ -2,6 +2,7 @@ import express, { type NextFunction, type Response, type Request, type ErrorRequ
 import { mongoConnect } from "../domain/repositories/mongo-repository";
 import { userRouter } from "./user.routes";
 import { classroomRouter } from "./classroom.routes";
+import { subjectRouter } from "./subject.routes";
 
 export const configureRoutes = (app: any): any => {
   // Rutas
@@ -25,6 +26,7 @@ export const configureRoutes = (app: any): any => {
 
   // Usamos las rutas
   app.use("/public", express.static("public"));
+  app.use("/subject", subjectRouter);
   app.use("/classroom", classroomRouter);
   app.use("/user", userRouter);
   app.use("/", router);

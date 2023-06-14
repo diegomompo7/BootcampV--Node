@@ -12,12 +12,16 @@ const getUserCount = async (): Promise<number> => {
 };
 
 const getUserById = async (id: string): Promise<Document<IUser> | null> => {
-  return await User.findById(id).populate(["children"]);
+  return await User.findById(id).populate(["children", "classroom"]);
 };
 
 const getUserByEmailWithPassword = async (email: string): Promise<Document<IUser> | null> => {
   const user: Document<IUser> | null = await User.findOne({ email }).select("+password") as any;
   return user;
+};
+
+const getStudentsByClassroomId = async (classroomId: string): Promise<IUser[]> => {
+  return await User.find({ classroom: classroomId });
 };
 
 const createUser = async (userData: IUserCreate): Promise<Document<IUser>> => {
@@ -42,6 +46,7 @@ export const userOdm = {
   getUserCount,
   getUserById,
   getUserByEmailWithPassword,
+  getStudentsByClassroomId,
   createUser,
   deleteUser,
   updateUser,

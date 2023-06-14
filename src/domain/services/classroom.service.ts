@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { classroomOdm } from "../odm/classroom.odm";
+import { userOdm } from "../odm/user.odm";
+import { subjectOdm } from "../odm/subject.odm";
 
 export const getClassrooms = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
@@ -43,9 +45,14 @@ export const getClassroomById = async (req: Request, res: Response, next: NextFu
     const classroom = await classroomOdm.getClassroomById(classroomIdToShow);
 
     if (classroom) {
-      const temporalClassroom = classroom.toObject();
-      // TODO: RELLENAR LOS DATOS DE LOS ALUMNOS Y DE LAS ASIGNATURAS
-      res.json(temporalClassroom);
+      const classroomToSend = classroom.toObject();
+
+      const students = await userOdm.getStudentsByClassroomId(classroom.id);
+      const subjects = await subjectOdm.getSubjectsByClassroomId(classroom.id);
+
+      classroomToSend.students = students;
+      classroomToSend.subjects = subjects;
+      res.json(classroomToSend);
     } else {
       res.status(404).json({});
     }

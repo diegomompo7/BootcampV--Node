@@ -1,6 +1,7 @@
 import { Document, Schema, model } from "mongoose"
 import validator from "validator"
 import bcrypt from "bcrypt"
+import { Classroom, IClassroom } from "./classroom.entity";
 
 export enum ROL {
   "STUDENT" = "STUDENT",
@@ -14,7 +15,7 @@ export interface IUserCreate {
   password: string;
   firstName: string;
   lastName: string;
-  // classroom?: IClassroom
+  classroom?: IClassroom;
   children?: IUser[];
   rol: ROL;
 }
@@ -51,7 +52,11 @@ const userSchema = new Schema<IUserCreate>({
     required: true,
     minLength: 3,
   },
-  // clasroom?: IClassroom,
+  classroom: {
+    type: Schema.Types.ObjectId,
+    ref: Classroom,
+    required: false,
+  },
   children: {
     type: [
       {
