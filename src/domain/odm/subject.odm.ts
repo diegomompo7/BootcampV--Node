@@ -4,7 +4,8 @@ import { Document } from "mongoose";
 const getAllSubjects = async (page: number, limit: number): Promise<ISubject[]> => {
   return await Subject.find()
     .limit(limit)
-    .skip((page - 1) * limit);
+    .skip((page - 1) * limit)
+    .populate(["classroom", "teacher"])
 };
 
 const getSubjectCount = async (): Promise<number> => {
